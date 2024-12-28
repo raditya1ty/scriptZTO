@@ -1,0 +1,286 @@
+<html>
+ <head>
+  <title>
+   Tempat radit1ty
+  </title>
+  <link rel="icon" href="logo radit1ty.jpg">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+      
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .header .icons {
+            display: flex;
+            gap: 10px;
+        }
+        .header .icons i {
+            font-size: 20px;
+            color: #4CAF50;
+        }
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            margin: 10px 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .card .info {
+            flex-grow: 1;
+        }
+        .card .info h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .card .info p {
+            font-size: 14px;
+            color: #888;
+            margin: 5px 0 0;
+        }
+        .card .arrow {
+            font-size: 20px;
+        }
+        .card:nth-child(1) {
+            background-color: #e0f7fa;
+        }
+        .card:nth-child(2) {
+            background-color: #e3f2fd;
+        }
+        .card:nth-child(3) {
+            background-color: #fffde7;
+        }
+        .card:nth-child(4) {
+            background-color: #ffebee;
+        }
+        a {
+            color: #000000;
+        }
+        p {
+            color: #000000;
+            text-align: center;
+            /* end code style */
+        }
+
+
+
+/* Gaya untuk menu samping */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Tersembunyi awalnya */
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: 0.3s; /* Durasi animasi */
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+
+/* Gaya dasar untuk body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* Gaya sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #31242473;
+    overflow-x: hidden;
+    transition: width 0.5s; /* Transisi width untuk efek geser */
+    padding-top: 60px;
+    z-index: 1000; /* Pastikan di atas konten lain */
+}
+
+/* Gaya untuk link di dalam sidebar */
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Gaya saat link di-hover */
+.sidebar a:hover {
+    background-color: #1164b3;
+}
+
+/* Tombol close di sidebar */
+.sidebar .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Gaya tombol untuk membuka sidebar */
+.open-btn {
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: #07a5ee;
+    padding: 10px 15px;
+    border: none;
+}
+
+/* Gaya konten utama saat sidebar terbuka */
+#main-content {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+  </style>
+ </head>
+ <body>
+    <button class="open-btn" onclick="openSidebar()">☰ Open Menu</button>
+
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="sidebar">
+        <span class="close-btn" onclick="closeSidebar()">×</span>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#versi">versi 1.0</a>
+        <a href="https://raditya1ty.github.io/radit1ty">Web Radit1ty</a>
+    </div>
+<script>
+    // Fungsi untuk membuka sidebar
+function openSidebar() {
+    document.getElementById("sidebar").style.width = "250px";
+    document.getElementById("main-content").style.marginLeft = "250px";
+}
+
+// Fungsi untuk menutup sidebar
+function closeSidebar() {
+    document.getElementById("sidebar").style.width = "0";
+    document.getElementById("main-content").style.marginLeft = "0";
+}
+</script>
+
+
+  <div class="header">
+   <i class="fas fa-circle">
+   </i>
+   <h1>
+    Tempat radit1ty
+   </h1>
+    <p>versi:1.0</p>
+   <div class="icons">
+    <i class="fas fa-user-plus">
+    </i>
+   </div>
+  </div>
+  <div class="music-player">
+
+    <audio controls>
+        <source src="ssstik.io_1734823038373.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+lagu event
+</div>
+  <div class="card">
+   <img alt="Logo of SMK Bakti Karya Parigi" height="50" src="pp.jpg" width="50"/>
+   <div class="info">
+    <p>
+     Daftar live hari ini
+    </p>
+    <h2>
+     <a href="live.html">daftar live hari ini</a>
+     
+    </h2>
+   </div>
+   <i class="fas fa-chevron-right arrow" style="color: #4CAF50;">
+   </i>
+  </div>
+  <div class="card">
+   <img alt="Logo of SMK Madya" height="50" src="cdid.jpg" width="50"/>
+   <div class="info">
+    <p>
+     Dartar list cdid
+    </p>
+    <h2>
+     apa saja cdid update
+    </h2>
+   </div>
+   <i class="fas fa-chevron-right arrow" style="color: #2196F3;">
+   </i>
+  </div>
+  <div class="card">
+   <img alt="Logo of Homeschooling Pena" height="50" src="donate.jpg" width="50"/>
+   <div class="info">
+    <p>
+     daftar
+    </p>
+    <h2>
+     <a href="daftar mod permanen.html">daftar mod permanen</a>
+    </h2>
+   </div>
+   <i class="fas fa-chevron-right arrow" style="color: #FF9800;">
+   </i>
+  </div>
+  <div class="card">
+   <img alt="Logo of SMK Kosgoro" height="50" src="https://storage.googleapis.com/a1aa/image/f3nxPA6fz9tWxEtqQyQfwXfdHoV1qhzgAVgKUnIlNsWwPG9PB.jpg" width="50"/>
+   <div class="info">
+    <p>
+     yg donate
+    </p>
+    <h2>
+     <a href="https://sociabuzz.com/raditiahamzah">bagi yg inggin support</a>
+    </h2>
+   </div>
+   <i class="fas fa-chevron-right arrow" style="color: #F44336;">
+   </i>
+  </div>
+ </body>
+ <div class="card">
+    <img alt="Logo of SMK Kosgoro" height="50" src="https://storage.googleapis.com/a1aa/image/f3nxPA6fz9tWxEtqQyQfwXfdHoV1qhzgAVgKUnIlNsWwPG9PB.jpg" width="50"/>
+    <div class="info">
+     <p>
+      vidio lucu
+     </p>
+     <h2>
+      <a href="live.html">vidio meme ngakak</a>
+     </h2>
+    </div>
+    <i class="fas fa-chevron-right arrow" style="color: #F44336;">
+    </i>
+   </div>
+  </body>
+</html>

