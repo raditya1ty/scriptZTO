@@ -166,6 +166,20 @@ body {
     transition: margin-left 0.5s;
     padding: 20px;
 }
+h1 {
+            position: relative;
+            display: inline-block;
+            font-size: 3rem;
+            color: rgb(255, 0, 0);
+            transition: transform 0.5s ease;
+            cursor: pointer;
+        }
+        video {
+            width: 200px;
+            height: auto;
+            border: 2px solid #000;
+            border-radius: 8px;
+        }
   </style>
  </head>
  <body>
@@ -174,11 +188,31 @@ body {
     <!-- Sidebar Menu -->
     <div id="sidebar" class="sidebar">
         <span class="close-btn" onclick="closeSidebar()">×</span>
+        <h2 id="animated-h2">Selamat datang</h2>
+
+        <script>
+            const h2 = document.getElementById('animated-h2');
+    
+            function getRandomRGB() {
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+                return `rgb(${r}, ${g}, ${b})`;
+            }
+    
+            setInterval(() => {
+                h2.style.color = getRandomRGB();
+            }, 500);
+        </script>
         <a href="#">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#versi">versi 1.0</a>
         <a href="https://raditya1ty.github.io/radit1ty">Web Radit1ty</a>
+        <video autoplay loop muted>
+            <source src="wa.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 <script>
     // Fungsi untuk membuka sidebar
@@ -198,22 +232,37 @@ function closeSidebar() {
   <div class="header">
    <i class="fas fa-circle">
    </i>
-   <h1>
-    Tempat radit1ty
-   </h1>
+   <h1 id="animated-h1">Radit1ty</h1>
+
+   <script>
+       const h1 = document.getElementById('animated-h1');
+
+       function getRandomRGB() {
+           const r = Math.floor(Math.random() * 256);
+           const g = Math.floor(Math.random() * 256);
+           const b = Math.floor(Math.random() * 256);
+           return `rgb(${r}, ${g}, ${b})`;
+       }
+
+       setInterval(() => {
+           h1.style.color = getRandomRGB();
+       }, 500);
+   </script>
     <p>versi:1.0</p>
+   
+   
    <div class="icons">
-    <i class="fas fa-user-plus">
-    </i>
+    <img alt="Logo of SMK Madya" height="50" src="wp2365067.jpg" width="50"/>
+   
    </div>
   </div>
   <div class="music-player">
 
     <audio controls>
-        <source src="ssstik.io_1734823038373.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+        <source src="aldosari part1.mp3" type="audio/mpeg">
+        lagu gk bisa di dimulai karna browser kamu gk bisa mendukung audio
     </audio>
-lagu event
+Lagu penyemangat
 </div>
   <div class="card">
    <img alt="Logo of SMK Bakti Karya Parigi" height="50" src="pp.jpg" width="50"/>
@@ -226,7 +275,7 @@ lagu event
      
     </h2>
    </div>
-   <i class="fas fa-chevron-right arrow" style="color: #4CAF50;">
+   <i class="fas fa-chevron-right arrow" style="color: #00e408;">
    </i>
   </div>
   <div class="card">
@@ -282,5 +331,30 @@ lagu event
     <i class="fas fa-chevron-right arrow" style="color: #F44336;">
     </i>
    </div>
+   <div class="card">
+    <img alt="Logo of SMK Kosgoro" height="50" src="empres.jpg" width="50"/>
+    <div class="info">
+     <p>
+      grup cdid
+     </p>
+     <h2>
+      <a href="https://chat.whatsapp.com/Elc0Q73TCAP7siHiCP75dH">grup ocdidrp</a>
+     </h2>
+    </div>
+    <div class="card">
+        <img alt="Logo of SMK Kosgoro" height="50" src="empres.jpg" width="50"/>
+        <div class="info">
+         <p>
+          pesan host
+         </p>
+         <h2>
+          <a href="pesan.html">pesan host</a>
+         </h2>
+        </div>
+   <i>
+    <div>
+        <image src="" mode="">
+    </div>
+   </i>
   </body>
 </html>
